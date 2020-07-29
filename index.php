@@ -15,7 +15,7 @@
     <?php require_once("header.php"); ?>
 
     <body>
-        <a class="scroll-to-top" href="javascript:void(0)">
+        <a class="scroll-to-top" aria-label="Scroll to the top of the page" href="javascript:void(0)">
             <img src="images/arrow_white.png" alt="arrow pointing up">
         </a>
         <div class="hero-banner">

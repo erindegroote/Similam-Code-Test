@@ -8,6 +8,10 @@
     opacity: .7;
     background-color: $color-primary;
     z-index: 999;
+
+    @include mq-min-md {
+        right: 0;
+    }
 }
 
 .hero-banner {
