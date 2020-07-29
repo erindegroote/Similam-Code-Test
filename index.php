@@ -17,7 +17,7 @@
     <body>
 
         <div class="hero-banner">
-        <img class="banner-mobile" src="images/simyskin_banner_mobile.jpg" alt="">
+        <img class="banner-mobile" src="images/simyskin_banner_mobile.jpg" alt="female scientist smiling">
             <div>
                 <h1>Lorem Ipsum dolor sit amet</h1>
                 <p>Aenean vulputate eleifend tellus. leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
@@ -40,19 +40,19 @@
             <div class="icon-list">
                 <ul>
                     <li class="item-icon">
-                        <img src="images/france_icon.png" alt="">
+                        <img src="images/france_icon.png" alt="Eiffel tower icon">
                         <p>Made in France</p>
                     </li>
                     <li class="item-icon">
-                        <img src="images/leaf_icon.png" alt="">
+                        <img src="images/leaf_icon.png" alt="Leaf icon">
                         <p>All Natural</p>
                     </li>
                     <li class="item-icon">
-                        <img src="images/nanotechnology_icon.png" alt="">
+                        <img src="images/nanotechnology_icon.png" alt="Atom icon">
                         <p>Nanotechnology</p>
                     </li>
                     <li class="item-icon">
-                        <img src="images/systems_biology_icon.png" alt="">
+                        <img src="images/systems_biology_icon.png" alt="Hexagonal icon with dots at each corner">
                         <p>Systems Biology</p>
                     </li>
                 </ul>
@@ -75,19 +75,19 @@
                     <div class="icon-list">
                         <ul>
                             <li class="item-icon">
-                                <img src="images/france_icon.png" alt="">
+                                <img src="images/france_icon.png" alt="Eiffel tower icon">
                                 <p>Made in France</p>
                             </li>
                             <li class="item-icon">
-                                <img src="images/leaf_icon.png" alt="">
+                                <img src="images/leaf_icon.png" alt="Leaf icon">
                                 <p>All Natural</p>
                             </li>
                             <li class="item-icon">
-                                <img src="images/nanotechnology_icon.png" alt="">
+                                <img src="images/nanotechnology_icon.png" alt="Atom icon">
                                 <p>Nanotechnology</p>
                             </li>
                             <li class="item-icon">
-                                <img src="images/systems_biology_icon.png" alt="">
+                                <img src="images/systems_biology_icon.png" alt="Hexagonal icon with dots at each corner">
                                 <p>Systems Biology</p>
                             </li>
                         </ul>
@@ -240,13 +240,13 @@
                 <div class="before-after">
                     <div class="image-heading">
                         <h3>Before</h3>
-                        <img src="images/before_after.jpg" alt="">
+                        <img src="images/before_after.jpg" alt="Skin around the eyes before using Simyskin">
                     </div>
                 </div>
                 <div class="before-after">
                     <div class="image-heading">
                         <h3>After</h3>
-                        <img src="images/before_after.jpg" alt="">
+                        <img src="images/before_after.jpg" alt="Skin around the eyes after using Simyskin">
                     </div>
                 </div>
             </div>
@@ -255,7 +255,7 @@
                 <div class="before-after">
                     <h3>Before</h3>
                     <div class="image-heading">
-                        <img src="images/before_after.jpg" alt="">
+                        <img src="images/before_after.jpg" alt="Skin around the eyes before using Simyskin">
                     </div>
                     <div>
                         <h2>Visible results lorem ipsum dolor</h2>
@@ -265,7 +265,7 @@
                 <div class="before-after">
                     <h3>After</h3>
                     <div class="image-heading">
-                        <img src="images/before_after.jpg" alt="">
+                        <img src="images/before_after.jpg" alt="Skin around the eyes after using Simyskin">
                     </div>
                     <div>
                         <h2>Return Guarantee</h2>
@@ -312,8 +312,8 @@
                 </div>
             </div>
             <div class="carousel-slide">
-                <a class="dot dot-left selected" href="javascript:void(0)"></a>
-                <a class="dot dot-right" href="javascript:void(0)"></a>
+                <a class="dot dot-left selected" aria-label="left carousel selector" href="javascript:void(0)"></a>
+                <a class="dot dot-right" aria-label="right carousel selector" href="javascript:void(0)"></a>
             </div>
         </div>
 
