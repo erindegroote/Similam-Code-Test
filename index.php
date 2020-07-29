@@ -15,7 +15,9 @@
     <?php require_once("header.php"); ?>
 
     <body>
-
+        <a class="scroll-to-top" href="javascript:void(0)">
+            <img src="images/arrow_white.png" alt="arrow pointing up">
+        </a>
         <div class="hero-banner">
         <img class="banner-mobile" src="images/simyskin_banner_mobile.jpg" alt="female scientist smiling">
             <div>

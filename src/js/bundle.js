@@ -19,3 +19,7 @@ function swipeleftHandler( event ) {
     $("a.dot-right").addClass("selected");
     $("a.dot-left").removeClass("selected");
 }
+
+$(".scroll-to-top").on("click", function() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+});
