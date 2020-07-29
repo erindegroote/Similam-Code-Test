@@ -232,6 +232,10 @@
             margin: 0 auto;
             width: 100%;
             max-width: 960px;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                margin: inherit;
+            }
         }
     }   
 }
@@ -637,6 +641,10 @@
         @include mq-min-md {
             width: 40%;
             min-width: unset;
+
+            @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                min-width: auto;
+            }
         }
 
         .testimonial,
@@ -764,6 +772,10 @@
 
                 @include mq-min-md {
                     width: 20%;
+                }
+
+                @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+                    display: block;
                 }
 
                 img {
