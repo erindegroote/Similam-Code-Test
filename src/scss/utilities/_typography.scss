@@ -1,0 +1,85 @@
+@font-face {
+    font-family: MuliRegular;
+    src: url(../../fonts/Muli.ttf);
+}
+
+@font-face {
+    font-family: MuliLight;
+    src: url(../../fonts/Muli-Light.ttf);
+}
+
+@font-face {
+    font-family: MuliLightItalic;
+    src: url(../../fonts/Muli-LightItalic.ttf);
+}
+
+$font-family-sans-serif: MuliRegular, Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$font-family-sans-serif-secondary: MuliLight, Arial, 'Helvetica Neue', Helvetica, sans-serif !default;
+$font-primary:       $font-family-sans-serif !default;
+$font-secondary:     $font-family-sans-serif-secondary !default;
+
+$font-size-base:     16px !default;                    	// 16px
+$font-size-small:    ceil(($font-size-base * 0.875));	// ~14px
+$font-size-med:      ceil(($font-size-base * 1.25));  	// ~20px
+$font-size-large:    ceil(($font-size-base * 1.5));    	// ~24px
+$font-size-xlarge:   ceil(($font-size-base * 2));      	// ~32px
+
+body p {
+    font-size: $font-size-base;
+  }
+
+p {
+    color: $color-grey;
+
+    font: {
+        family: $font-primary;
+        weight: normal;
+    }
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font: {
+        family: $font-primary;
+    }
+    color: $color-secondary;
+}
+
+h1, .h1 { 
+    font: {
+        size: 2.625em;
+    }
+
+    @include mq-min-md {
+        font: {
+            size: 3.125em;
+        }    
+    }
+}
+
+h2, .h2 { 
+    font: {
+        size: 1.563em;      
+    }
+
+    @include mq-min-md {
+        font: {
+            size: 1.563em;
+        }    
+    }   
+}
+
+h3, .h3 { 
+    text-transform: uppercase;
+    
+    font: {
+        size: 1.250em;
+        family: $font-secondary;
+    }
+
+    @include mq-min-md {
+        font: {
+            size: 1.250em;
+        }    
+    }
+}

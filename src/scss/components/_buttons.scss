@@ -1,0 +1,15 @@
+.btn {
+    display: inline-block;
+    background-color: $color-secondary;
+    padding: 10px 20px;
+    color: $color-white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: .3s ease-in-out;
+    text-align: center;
+
+    &:hover,
+    &:focus {
+        background-color: darken($color-secondary, $amount: 10%)
+    }
+}

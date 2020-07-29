@@ -1,0 +1,928 @@
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+
+    @include mq-min-md {
+        height: 700px;
+        background-position-x: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("../../images/simyskin_banner.jpg");
+    }
+
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        z-index: -1;
+
+        &.banner-desktop {
+            display: none;
+        }
+
+        &.banner-mobile {
+            display: block;
+            position: static;
+        }
+
+        @include mq-min-md {
+            &.banner-desktop {
+                display: block;
+            }
+
+            &.banner-mobile {
+                display: none;
+            }
+        }
+
+        @include mq-min-md {
+            max-height: 1150px;
+        }
+    }
+
+    > div {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        max-width: 500px;
+        padding-top: 45px;
+        padding-left: 120px;
+
+        @include mq-min-md {
+            display: flex;
+        }
+
+        @include mq-min-lg {
+            padding-top: 90px;
+        }
+
+        h1, 
+        p {
+            flex-basis: 100%;
+        }
+
+        p {
+            font-size: 1.563em;
+            margin-bottom: 2em;
+        }
+    }
+}
+
+.product-details-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
+
+    @include mq-min-md {
+        display: none;
+    }
+
+    .product-image-heading {
+        > div {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: -90px;
+
+            .product-tall {
+                img {
+                    max-height: 600px;
+                }
+            }
+
+            .product-heading {
+                padding-left: 15px;
+                
+                @include mq-min-xs {
+                    max-width: 60%;
+                    padding-left: 30px;
+                }
+
+                .btn {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+    .icon-list {
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-left: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                flex-wrap: wrap;
+                width: 50%;
+                padding: 15px 0;
+
+                @include mq-min-sm {
+                    width: 25%;
+                }
+
+                p {
+                    flex-basis: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.product-details {
+    position: relative;
+    display: none;
+    margin-top: -200px;
+
+    @include mq-min-md {
+        display: block;
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 0 30px;
+    }
+
+    .product-tall {
+        img {
+            max-height: 700px;
+        }
+    }
+
+    .product-details-right {
+        padding-left: 5em;
+        
+        .icon-list {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                padding-left: 0;
+                list-style: none;
+    
+                li {
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-wrap: wrap;
+                    width: 50%;
+                    padding: 15px 0;
+    
+                    @include mq-min-sm {
+                        width: 25%;
+                    }
+    
+                    p {
+                        flex-basis: 100%;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-video {
+    margin-top: 2em;
+    padding: 40px 15px;
+    background-color: $color-primary-light;
+
+    h2 {
+        margin-top: 0;
+        text-align: center;
+    }
+    
+    .video {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            margin: 0 auto;
+            width: 100%;
+            max-width: 960px;
+        }
+    }   
+}
+
+.product-solutions {
+    position: relative;
+    z-index: 99;
+    padding-bottom: 7.5em;
+    
+    > div {
+        margin: 0 auto;
+        max-width: 1280px;
+        overflow: hidden;
+    }
+
+    &::after {
+        position: absolute;
+        display: block;
+        bottom: 0;
+        transform: translateY(55%);
+        right: 0;
+        height: 112px;
+        width: 263.75px; 
+        background-image: url(../../images/simyskin_bottle_side.png);
+        background-size: cover;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        z-index: 999;
+        content: "";
+
+        @include mq-min ( 530px ) {
+            height: 224px;
+            width: 527.5px;           
+        }
+    }
+
+    h2 {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        width: 100%;
+        text-align: center;
+
+        @include mq-min-sm {
+            margin-top: 3em;
+            margin-bottom: 3em;
+        }
+    }
+
+    .solution-phases {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mq-min-sm {
+            margin-right: -50px;
+            margin-left: -50px;
+        }
+
+        .solution {
+            width: 100%;
+            
+            @include mq-min-sm {
+                width: 33%;
+            }
+
+            > div {
+                @include mq-min-sm {
+                    padding-right: 50px;
+                    padding-left: 50px;
+                }
+            }
+
+            &:nth-of-type(2) {
+                @include mq-min-sm {
+                    border-right: 1px solid $color-grey;
+                    border-left: 1px solid $color-grey;
+                }
+            }
+
+            img {
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .solution-content {
+                padding: 40px 15px;
+
+                .solution-phase {
+                    strong {
+                        color: $color-black;
+                        text-transform: uppercase;
+                    }
+
+                    span {
+                        color: $color-secondary
+                    }
+                }
+
+                .btn {
+                    display: inline-block;
+                }
+            }
+        }
+
+    }
+
+    .solution-info-lists {
+        padding-right: 15px;
+        padding-left: 15px;
+
+        @include mq-min-sm {
+            margin-top: 5em;
+        }
+
+        > div:not([class]) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .info-list {
+                width: 100%;
+
+                @include mq-min-sm {
+                    width: 50%;
+                }
+
+                &:first-of-type {
+                    > div {
+                        @include mq-min-sm {
+                            margin-right: 2em;
+                        }
+                    }
+                }
+
+                &:last-of-type {
+                    > div {
+                        @include mq-min-sm {
+                            margin-left: 2em;
+                        }
+                    }
+                }
+
+                h2 {
+                    margin-top: 2em;
+                    margin-bottom: 1em;
+                    text-align: left;
+                }
+
+                ul {
+                    padding-left: 15px;
+                    list-style: none;
+
+                    li {
+                        display: block;
+                        padding: 10px 0;
+                        color: $color-grey;
+
+                        &::before {
+                            color: $color-secondary;
+                            content: "\2022";
+                            display: inline-block; 
+                            width: 1em; 
+                            margin-left: -1em; 
+                            font-size: 1.5em;
+
+                            @include mq-min-md {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-ingredients {
+    position: relative;
+    background-color: $color-primary-light;
+    overflow: hidden;
+    padding-top: 7.5em;
+
+    > img {
+        display: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 150%;
+        opacity: .5;
+        z-index: 0;
+
+        @include mq-min-md {
+            display: block;
+        }
+    }
+    
+    > div:not([class]) {    
+        position: relative; 
+        margin: 0 auto;
+        padding: 0 15px;
+        max-width: 1280px;
+        z-index: 1;
+    }
+
+    .icon-header {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        h2 {
+            flex-basis: 100%;
+            text-align: center;
+        }
+    }
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-basis: 100%;
+        padding-bottom: 2.5em;
+        list-style: none;
+
+        li {
+            margin-top: 1em;
+            width: 100%;
+
+            @include mq-min-sm {
+                width: 45%;
+            }
+
+            &::before {
+                color: $color-secondary;
+                content: "\2022";
+                display: inline-block; 
+                width: 1em;
+                margin-left: -1em; 
+                font-size: 1.5em;
+
+                @include mq-min-md {
+                    text-align: center;
+                }
+            }
+
+            > div {
+                display: inline;
+                
+
+                h3 {
+                    display: inline;
+                }
+            }
+        }
+    }
+
+    .product-before-after-mobile {
+        display: block;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        background-color: $color-off-white;
+
+        @include mq-min-md {
+            display: none;
+        }
+
+        .before-after-copy {
+            padding: 0 15px;
+        }
+
+        .before-after {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 0 15px;
+            max-width: 1080px;
+
+            h3 {
+                flex-basis: 100%;
+                margin-top: 2.5em;
+                text-align: center;
+            }
+
+            div {
+                h2 {
+                    margin-top: 0;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    .product-before-after-desktop {
+        display: none;
+        padding-top: 2.5em;
+        padding-bottom: 2.5em;
+        background-color: $color-off-white;
+
+        @include mq-min-md {
+            display: block;
+        }
+        
+        .before-after {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 0 auto;
+            padding: 0 15px;
+            max-width: 1080px;
+
+            h3 {
+                flex-basis: 100%;
+            }
+
+            div {
+                width: 45%;
+
+                h2 {
+                    margin-top: 0;
+                }
+
+                img {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.product-testimonials {
+    padding-top: 6em;
+
+    @include mq-max-md {
+        overflow: hidden;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    > div.testimonial-container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 0 auto;
+        padding: 4em 15px;
+
+        @include mq-min-md {
+            position: static;
+            max-width: 1280px;
+        }
+    }
+
+    .carousel-slide {
+        display: flex;
+        justify-content: center;
+
+        @include mq-min-md {
+            display: none;
+        }
+
+        .dot {
+            display: inline-block;
+            margin: 0 0.25em;
+            height: 10px;
+            width: 10px;
+            background-color: $color-grey;
+            border-radius: 50%;
+
+            &.selected {
+                background-color: $color-secondary;
+            }
+        }
+    }
+
+    .testimonial-product {
+        display: none;
+        width: 10%;
+
+        @include mq-min-md {
+            display: block;
+        }
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+    .testimonial-wrapper {
+        width: 100%;
+        min-width: 100%;
+
+        @include mq-min-md {
+            width: 40%;
+            min-width: unset;
+        }
+
+        .testimonial,
+        .testimonial-author {
+            @include mq-max-md {
+                margin: 0 2em;
+            }
+        }
+
+        .testimonial {
+            > div {
+                position: relative;
+                border: 1px solid $color-grey-light;
+                padding: 2.5em 4em;
+
+                &::before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute;
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-top: 15px solid $color-grey-light;
+                    border-bottom: 15px solid transparent;
+                    right: 85%;
+                    bottom: -30px;
+
+                    @include mq-min-xs {
+                        right: 90.5%;
+                    }
+                }
+                  
+                &::after {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    position: absolute; 
+                    border-left: 15px solid transparent;
+                    border-right: 15px solid transparent;
+                    border-top: 15px solid #fff;
+                    border-bottom: 15px solid transparent;
+                    right: 85%;
+                    bottom: -29px;
+
+                    @include mq-min-xs {
+                        right: 90.5%;
+                    }
+                }
+
+                > p {
+                    position: relative;
+                    margin: 0;
+
+                    &::before {
+                        position: absolute;
+                        top: -40px;
+                        left: -50px;
+                        font-size: 6em;
+                        font-family: Georgia, Times, 'Times New Roman', serif;
+                        opacity: .2;
+                        content: "“";
+                    }
+
+                    &::after {
+                        position: absolute;
+                        top: 75%;
+                        right: -50px;
+                        font-size: 6em;
+                        font-family: Georgia, Times, 'Times New Roman', serif;
+                        opacity: .2;
+                        content: "”";
+                    }
+                }
+            }
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            margin-top: 2em;
+
+            img {
+                margin-right: 1.5em;
+                max-width: 80px;
+            }
+
+            > div {
+                p {
+                    margin: 0;
+                    strong {
+                        color: $color-secondary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.product-availability {
+    padding: 0 15px;
+
+    h2 {
+        margin: 2em 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    > div {
+        max-width: 1080px;
+        margin: 0 auto;
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0;
+            list-style: none;
+
+            li {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 45%;
+
+                @include mq-min-md {
+                    width: 20%;
+                }
+
+                img {
+                    padding: 2em 0;
+                    max-width: 100%;
+                    max-height: 80px;
+                }
+            }
+        }
+    }
+}
+
+.product-shipping {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    padding: 2em 15px;
+    margin-top: 4em;
+    background-color: $color-grey-light;
+
+    @include mq-min-md {
+        padding: 4em 0;
+    }
+
+    &::before {
+        position: absolute;
+        display: none;
+        top: 20px;
+        right: 0;
+        height: 75px;
+        width: 100px;
+        background-image: url("../../images/shipping_truck.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: scale(-1, 1);
+        content: "";
+
+        @include mq-min-xs {
+            display: block;
+        }
+
+        @include mq-min-md {
+            display: none;
+        }
+    }
+
+    > img {
+        display: none;
+        max-height: 225px;
+
+        @include mq-min-md {
+            display: block;
+        }
+    }
+
+    .shipping-info { 
+        > div {
+            display: flex;
+            flex-wrap: wrap;
+
+            @include mq-min-md {
+                padding-left: 6em;
+            }
+            
+            h2 {
+                width: 100%;
+            }
+
+            .us-shipping,
+            .international-shipping {
+                margin-right: 2em;
+                width: 100%;
+
+                @include mq-min-md {
+                    width: 40%;
+                }
+            }
+        }
+    }
+}
+
+.product-cta {
+    position: relative;
+    padding: 50px 15px;
+    
+    > div {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 500px;
+
+        @include mq-min-md {
+            justify-content: center;
+        }
+    }
+
+    h2 {
+        flex-basis: 100%;
+        margin-top: 0;
+        margin-bottom: 1em;
+        text-align: left;
+
+        @include mq-min-md {
+            text-align: center;
+        }
+    }
+    
+    p {
+        flex-basis: 100%;
+        margin-bottom: 2em;
+        text-align: left;
+
+        @include mq-min-md {
+            text-align: center;
+        }
+    }
+
+    &:last-of-type {
+        padding: 7em 15px;
+        background-color: $color-primary;
+        overflow: hidden;
+
+        @include mq-min-md {
+            padding: 50px 15px;
+            overflow: visible;
+        }
+
+        h2 {
+            margin-top: 2em;
+            margin-bottom: 4em;
+            color: $color-white;
+
+            @include mq-min-md {
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+
+            span {
+                text-transform: uppercase;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            display: none;
+            bottom: -20%;
+            right: 5%;
+            height: 301px;
+            width: 112px;
+            background-image: url(../../images/simyskin_full_product.png);
+            background-size: cover;
+            background-position-y: center;
+            background-repeat: no-repeat;
+            z-index: 0;
+            content: "";
+
+            @include mq-min ( 400px ) {
+                display: block;
+            }
+
+            @include mq-min-md {
+                height: 401px;
+                width: 150px; 
+            }
+
+            @include mq-min ( 1080px ) {
+                height: 502px;
+                width: 184px;
+            }
+        }
+    }
+}
+
+.ui-loader {
+    display:none !important;
+}

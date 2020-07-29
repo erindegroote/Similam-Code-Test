@@ -1,0 +1,53 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 15px;
+    background-color: $color-primary;
+
+    @include mq-min-md{
+        padding-top: 0;
+        padding-bottom: 0;
+        padding-left: 120px;
+    }
+
+    .header-content {
+        > div {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .logo-tagline {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            .logo {
+                max-height: 37.5px;
+                margin-right: 50px;
+            }
+
+            p {
+                font-family: $font-secondary;
+                color: $color-white;
+            }
+        }
+    }
+
+    .btn {
+        display: none;
+        margin-right: -15px;
+        padding: 25px 30px;
+
+        @include mq-min-md {
+            display: block;
+        }
+    }
+}
